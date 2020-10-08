@@ -5,7 +5,7 @@ export function get(req, res, next) {
 
   const job = jobs.find((j) => j.id === id);
 
-  if (job){
+  if (job) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(job));
   } else {

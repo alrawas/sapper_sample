@@ -14,7 +14,7 @@
         },
         body: JSON.stringify({ title, salary, details }),
       });
-      const updatedJobs = await res.json();
+      // const updatedJobs = await res.json();
       goto('jobs');
     }
   };
@@ -43,7 +43,7 @@
 
 <h2>Add a New Job</h2>
 <form on:submit|preventDefault={handleSubmit}>
-  <input type="text" placeholder="job title" bind:value={title} reqiired />
+  <input type="text" placeholder="job title" bind:value={title} required />
   <input type="number" placeholder="salary" bind:value={salary} required />
   <textarea placeholder="job details" bind:value={details} required />
   <button class="btn">Add new job</button>
